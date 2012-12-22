@@ -1,0 +1,9 @@
+<%= form_tag(ticket_seeds_path, :class => "form-inline") do %>
+  <fieldset>
+    <label for="gameurl">StubHub Game URL</label>
+    <%= text_field_tag(:gameurl, params[:gameurl], :type => "text", :placeholder => "http://www.stubhub.com/...") %>
+    <%= button_tag(:type => "submit", :class => "btn") do %>
+      Submit
+    <% end %>
+  </fieldset>
+<% end %>

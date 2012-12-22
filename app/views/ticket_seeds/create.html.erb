@@ -1,0 +1,15 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>Lowest Price</th>
+  </thead>
+  <tbody>
+    <% @ticket_prices.each{|zone, price| %>
+      <tr>
+        <td><%= zone %></td>
+        <td><%= (price >= 100 ? price.to_s.insert(-3, ".") : "0.#{price}") %></td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>

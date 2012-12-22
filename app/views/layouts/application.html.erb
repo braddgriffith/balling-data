@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BallingData</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand">Balling Data</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <% if flash[:error] %>
+        <div class="text-error">
+          <%= flash[:error] %>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+
+</body>
+</html>
